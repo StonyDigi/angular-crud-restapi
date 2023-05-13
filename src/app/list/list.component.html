@@ -1,0 +1,25 @@
+<div class="flex">
+<h1>Word collection</h1>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Job</th>
+        <th scope="col">Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of this.service.people">
+        <td>{{x.name}}</td>
+        <td>{{x.age}}</td>
+        <td>{{x.job}}</td>
+        <td>
+            <button (click)="this.service.delete(x.id)" class="btn btn-sm btn-danger">Delete</button>&nbsp;
+            <button (click)="edit(x.id)" class="btn btn-sm btn-warning">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

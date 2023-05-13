@@ -1,0 +1,14 @@
+
+<h1>Edit Person</h1>
+<div>
+    <label>Name</label>
+    <input type="text" [(ngModel)]="this.actual.name" >
+
+    <label>Age</label>
+    <input type="text" [(ngModel)]="this.actual.age" >
+
+    <label>Job</label>
+    <input type="text" [(ngModel)]="this.actual.job" >
+
+    <button (click)="this.service.update(this.actual)" >Save</button>
+</div>
